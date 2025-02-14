@@ -1,14 +1,3 @@
-'''Progetta un algoritmo che gestisca l'iscrizione degli studenti a corsi disponibili in una università. 
-Per ogni corso ci sono un massimo di 100 posti liberi.
- Richiesto il nome del corso, mostra un menu con le seguenti opzioni "iscrivi", "annulla", "visualizza", "elimina", ed "Esci".
-
-    se l'utente inserisce "iscrivi", verifica se ci sono posti disponibili per il corso, quindi incrementa il numero di posti occupati;
-    se l'utente inserisce "annulla", decrementa il numero di posti occupati;
-    se l'utente inserisce "visualizza", mostra il numero dei posti liberi e il numero dei posti occupati nel corso;
-    se l'utente inserisce "elimina", elimina il corso e richiedi un nuovo corso;
-    se l'utente inserisce "esci", termina l'algoritmo.
-'''
-
 corsi: dict = {
     "Informatica": {
         "posti_liberi" : 100,

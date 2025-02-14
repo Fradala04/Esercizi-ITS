@@ -1,19 +1,3 @@
-'''Progettare un algoritmo che simuli il comportamento di un semaforo intelligente.
- Questo sistema deve adattare i tempi di durata (espressi in percentuale)
-   del verde in base al numero di veicoli presenti sulle principali direzioni di traffico: 
-   Nord-Sud ed Est-Ovest. Ogni direzione può ricevere una priorità se il numero di veicoli 
-   supera una soglia predefinita.
-
-Requisiti:
-
-Se il numero di veicoli in una sola direzione supera la soglia (es. 70 veicoli),
- quella direzione riceve un tempo minimo garantito per il verde (es. 60%) e il restante tempo è assegnato
-   all'altra direzione.
-Se entrambe le direzioni superano la soglia, il tempo è equamente suddiviso 
-(50% per ciascuna direzione).
-Se nessuna direzione supera la soglia, il tempo è calcolato proporzionalmente 
-al numero totale di veicoli nelle due direzioni.'''
-
 soglia = int(input("inserisci la soglia: ")) 
 Veicoli_Nord_Sud = int(input("quanti veicoli ci stanno nella direzione Nord-Sud ? : "))
 Veicoli_Est_Ovest = int(input("quanti veicoli ci stanno nella direzione Est-Ovest ? : "))
