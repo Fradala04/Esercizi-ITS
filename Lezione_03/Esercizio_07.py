@@ -1,11 +1,3 @@
-'''Progettare un algoritmo che consenta di inserire all'utente un elenco di voti non negativi relativi ad un esame, calcolandone la media.
- L'algoritmo deve chiedere all'utente se vuole inserire un voto. 
-
-Se la risposta è "SI", allora l'utente può procedere ad inserire il voto. 
-L'algoritmo deve consentire all'utente di inserire voti fin quando la risposta dell'utente sarà "NO". 
-
-Infine, mostrare in output il valore medio dei voti inseriti.'''
-
 somma = 0
 i = 0
 option: str = None
