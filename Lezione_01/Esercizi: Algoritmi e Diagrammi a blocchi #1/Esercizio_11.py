@@ -1,9 +1,6 @@
 posti = 20
 occupati = 0
 option: str = None
-
-
-
 while (option != "esci"):
   option = str(input("inserisci opzione: "))
   if (option != "prenota") and (option != "libera") and (option != "visualizza"):
