@@ -82,6 +82,3 @@ print(luoghi)
 3.9
 n_invitati = len(invitati)
 print(n_invitati)
-
-3.10
-cose: list = ["Cassino", "Bomba atomica", "Turco", "Scuola", "Banana", "Telefono", "Montagna"]
