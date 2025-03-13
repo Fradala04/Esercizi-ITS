@@ -1,0 +1,16 @@
+message_list:list = ["Ciao", "Come stai?", "Come va l'ITS?"]
+
+def send_messages(messaggi):
+    sent_messages = []
+    upper_bound = len(messaggi)
+    print(f"{messaggi=},\n{sent_messages}\n\n")
+
+    for i in range(upper_bound):
+        message = messaggi.pop(0)
+        sent_messages.append(message)
+
+        print(f"{messaggi=},\n{sent_messages=}\n\n")
+
+send_messages(message_list)
+
+
