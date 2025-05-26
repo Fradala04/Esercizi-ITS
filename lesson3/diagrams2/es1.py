@@ -1,33 +1,34 @@
-posti = int(input("inserisci il numero massimo di posti: "))
-occupati = 0
-option: str = None
+# Lettura del numero massimo di posti disponibili
+max_posti:int = int(input("Inserisci il numero massimo di posti disponibili: "))
+# Inizializzazione dei posti liberi
+liberi:int = max_posti
 
+while True:
+    # Lettura dell'opzione
+    opzione:str = input("Scegli un'opzione (ingresso/uscita/stato/esci): ").strip().lower()
 
-while option != "esci":
-    option = str(input("inserisci opzione: "))
-    if (option != "ingresso") and (option != "uscita") and (option != "stato") and (option != "esci"):
-       print("errore")
-    else:
-        if option == "ingresso":
-         if occupati < posti:
-                occupati+=1
-                posti-=1
-         else:
-             print("non ci  sono posti disponibili")
-         
-                
-    if option == "uscita":
-        if occupati > 0:
-                posti+=1
-                occupati-=1
-        else:
-            print("è già tutto libero")
-    if option == "stato":
-        print(f"i posti occupati sono: {occupati}, mentre quelli liberi sono: {posti}  ")
+    match opzione:
+        case "ingresso":
+            if liberi > 0:
+                liberi -= 1
+                print("Ingresso effettuato con successo.")
+            else:
+                print("Non ci sono posti disponibili.")
 
+        case "uscita":
+            if liberi < max_posti:
+                liberi += 1
+                print("Uscita registrata con successo.")
+            else:
+                print("Tutti i posti sono già disponibili.")
 
+        case "stato":
+            print(f"Posti disponibili: {liberi}")
+            print(f"Posti occupati: {max_posti - liberi}")
 
-    
-      
-    
+        case "esci":
+            print("Uscita dal sistema.")
+            break
 
+        case _:
+            print("Opzione non valida. Riprova.")

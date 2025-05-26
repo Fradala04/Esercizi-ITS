@@ -1,16 +1,25 @@
-n = int(input("inserisci un valore intero positivo: "))
-i = 1
-divisibili = 0
-if n < 0:
-    print("errore")
-else:
-    while i <=10:
+import sys
 
-        v = int(input("inserisci numero: "))
-        i+=1
-        if (n % v == 0):
-            divisibili+=1
-print(divisibili)
+while True:
+    n:int = int(input("Inserisci un numero intero positivo: "))
 
+    if n > 0:
+      break
+    else:
+      print("Errore: n deve essere positivo.")
+      sys.exit()
 
+# Inizializzazione delle variabili
+cont:int = 0
 
+# Ciclo per 10 iterazioni
+for i in range(10):
+    # Lettura del valore x
+    x:int = int(input(f"Inserisci il valore {i + 1}: "))
+
+    # Controllo se x è divisibile per n
+    if x % n == 0:
+        cont += 1
+
+# Stampa del risultato
+print(f"Il numero di valori multipli di {n} è: {cont}")

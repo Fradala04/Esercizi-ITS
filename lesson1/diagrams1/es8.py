@@ -1,9 +1,10 @@
-soglia = int(input("inserisci soglia: "))
-i = 1
-cont_soglia = 0
-while i <= 7:
-    n = int(input("inserisci numero: "))
-    i+=1
+# Legge il valore della soglia
+soglia:float = float(input("Inserisci il valore della soglia: "))
+
+# Iterazione per 7 volte
+for cont in range(7):
+    # Legge il numero
+    n:float = float(input("Inserisci un numero: "))
+    # Se il numero è maggiore della soglia, lo stampa
     if n > soglia:
-        cont_soglia+=1
-print(f"ci sono {cont_soglia} numeri che superano la soglia")
+        print(f"Numero maggiore della soglia: {n}")

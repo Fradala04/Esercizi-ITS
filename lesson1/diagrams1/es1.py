@@ -1,8 +1,10 @@
-import math 
-a = float(input("inserisci il valore dell'ipotenusa: "))
-b= float(input("inserisci il valore del cateto: "))
+# Leggi a e b
+a:float = float(input("Inserisci il valore di a: "))
+b:float = float(input("Inserisci il valore di b: "))
+
+# Controlla la condizione a > b
 if a > b:
-    c = math.sqrt(a**2 - b**2)
-    print(f"l'altro cateto vale: {c}")
+    c:float = (a**2 - b**2) ** (1/2)
+    print("Il valore di c è:", c)
 else:
-    print("errore")
+    print("Errore")

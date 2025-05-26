@@ -1,6 +1,8 @@
-numero:int = int(input("Inserire un numero: "))
+# Chiede all'utente di inserire un numero intero
+n:int = int(input("Inserisci un numero: "))
 
-if numero % 2 == 0 and numero > 10:
-    print("Numero valido.")
-elif numero % 2 != 0 and numero < 10:
-    print("Numero non valido.")
+# Controlla se il numero è pari e maggiore di 10
+if n % 2 == 0 and n > 10:
+  print("Numero valido")
+else:
+  print("Numero non valido")

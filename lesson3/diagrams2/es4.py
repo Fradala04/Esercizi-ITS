@@ -1,15 +1,19 @@
-tutor = 10
+# Inizializzazione delle variabili
+n_tutor:int = 10  # Numero iniziale di tutor disponibili
+attesa:int = 0    # Numero iniziale di studenti in attesa
 
-studenti_in_attesa = 40
+while True:
+    # Lettura dell'ingresso dello studente
+    studente:str = input("Inserisci il nome dello studente: ")
 
-while studenti_in_attesa < 50:
-    studente = str(input("inserisci il nome dello studente: "))
-    
-    
-    if tutor > 0:
-        print("tutor assegnato")
-        tutor-=1
+    if n_tutor > 0:
+        n_tutor -= 1
+        print("Tutor assegnato con successo.")
     else:
-        studenti_in_attesa+=1
-        print("studente inserito nella sala d'attesa")
+        attesa += 1
+        print("Studente in attesa.")
 
+    # Verifica della condizione di terminazione
+    if n_tutor == 0 and attesa > 50:
+        print("Numero massimo di studenti in attesa raggiunto. Terminazione del programma.")
+        break

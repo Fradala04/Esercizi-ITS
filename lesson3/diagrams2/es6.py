@@ -1,15 +1,25 @@
-x = int(input("inserisci il valore di x: "))
-i = 1
-somma = 0
-if x < 0:
-    print("errore")
+# Lettura del valore di x
+x:float = float(input("Inserisci un valore positivo per x: "))
+
+# Controllo se x è positivo
+if x > 0:
+    # Inizializzazione delle variabili
+    somma:int = 0
+
+    # Ciclo per 10 iterazioni
+    for i in range(10):
+        # Lettura del valore n
+        n:int = int(input(f"Inserisci il valore {i + 1}: "))
+
+        # Controllo della parità di x
+        if x % 2 == 0:
+            if n > x / 2:
+                somma += n
+        else:
+            if n < x:
+                somma += n
+
+    # Stampa del risultato
+    print(f"La somma calcolata è: {somma}")
 else:
-    while i <= 10:
-        n = int(input("inserisci numero: "))
-        i+=1
-        if (x % 2 == 0) and (n > (x / 2)):
-            somma = somma + n
-        if (x % 2 != 0) and (n < x):
-            somma = somma + n
-    print(somma)
-        
+  print("Errore, x deve essere positivo.")

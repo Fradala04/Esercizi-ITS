@@ -1,13 +1,15 @@
-i = 1
-pari = 0
-dispari = 0
-while i <= 10:
-    n = int(input("inserisci numero: "))
-    i+=1
-    if n % 2 == 0:
-        pari+=1
-    else:
-        dispari+=1
-print(pari)
-print(dispari)
+# Inizializzazione delle variabili
+pari:int = 0
+dispari:int = 0
 
+# Ciclo per 10 iterazioni
+for cont in range(10):
+    n:int = int(input("Inserisci un numero: "))  # Legge un numero
+    if n % 2 == 0:  # Controlla se è pari
+        pari += 1
+    else:  # Se non è pari, è dispari
+        dispari += 1
+
+# Stampa i risultati
+print(f"Numeri pari inseriti: {pari}")
+print(f"Numeri dispari inseriti: {dispari}")
